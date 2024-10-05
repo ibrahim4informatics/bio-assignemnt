@@ -1,0 +1,361 @@
+* {
+  /* setting the margin and padding to 0 for all elements */
+  margin: 0;
+  padding: 0;
+  /* sizing the elements from the border */
+  box-sizing: border-box;
+}
+
+html {
+  /* setting the scroll to be smooth */
+  scroll-behavior: smooth;
+}
+
+body {
+  /* defining the font family to be used */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* setting default font color */
+  color: #252b3f;
+}
+
+/* class container just to not take all the width */
+.container {
+  /* the container take full width until he get 900 pixels it will be stoped */
+  width: 100%;
+  max-width: 1024px;
+  /* taking the right and left spaces and making margin equals (center) */
+  margin-inline: auto;
+}
+
+/* styles for nav link */
+.nav-link {
+  /* removing the text decoration */
+  text-decoration: none;
+  font-size: 20px;
+  color: #eeffee;
+  /* making the hover changes smooth*/
+  transition: all 0.1s ease-in-out;
+}
+
+/* styles when hovering on this links */
+.nav-link:hover {
+  /* adding line on the bottom of the link */
+  border-bottom: 4px solid #7064de;
+  font-weight: bold;
+}
+
+/* nav link container default styles */
+.nav-link-container {
+  /* delete the ul disc decoration */
+  list-style: none;
+  /* align links horizontally and centered */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* spacing the links  */
+  gap: 2em;
+  /* setting the width to take full width */
+  width: 100%;
+}
+
+/* navbar container styles */
+nav {
+  width: 100%;
+  padding: 1em;
+  /* making little shadow on the bottom */
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.35);
+  /* --> make the position stick on the top <-- */
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: #1e191f;
+}
+/* personal information section styles */
+#me {
+  /* taking full width of the screen */
+  width: 100%;
+  /* taking the full height of screen including navbar */
+  height: calc(100vh - 56px);
+
+  /* making it display flex to display the two childrens side by side */
+  display: flex;
+}
+
+/* style the first child (personal information section) */
+#me section:first-child {
+  /* taking the rest of space*/
+  flex: 1;
+  /* some spacing  */
+  padding: 2em;
+
+  /* making it flex to easy center elements */
+  display: flex;
+  /* making the direction to column to make it vertical */
+  flex-direction: column;
+  /* center horizontaly the elements */
+  align-items: center;
+}
+
+#me section:first-child h1 {
+  font-size: 32px;
+  margin-top: 1.5em;
+  color: #7064de;
+}
+
+#me section:first-child img {
+  /* setting the size of the image to be 150px */
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  /* set spacing and shadows */
+  margin: 12px 0;
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.35);
+  /* making the image round */
+  border-radius: 50%;
+}
+
+/* styling the paragraph */
+#me section:first-child p {
+  margin-top: 1.5em;
+  line-height: 2em;
+  font-size: 14px;
+  font-weight: 700;
+  color: #7c7c7c;
+}
+/* style for the skills container */
+#me section:first-child section {
+  width: 100%;
+  margin-top: 1em;
+}
+/* styles for the list of skills */
+#me section:first-child section ol {
+  /* some spacing from left and top */
+  margin-left: 1.5em;
+  margin-top: 0.5em;
+  /* making the lineheght bigger to have space between list elements */
+  line-height: 2em;
+  /* setting the text to bold */
+  font-weight: bold;
+  /* changing the list style from numerique to alphabetic uppercase */
+  list-style-type: upper-alpha;
+}
+
+/* styles for the next button */
+#me section:first-child a {
+  text-decoration: none;
+  color: #7b74b9;
+  margin-top: auto;
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+  border: solid 1.5px #7b74b9;
+  width: 120px;
+  text-align: center;
+  border-radius: 0.25em;
+  transition: background-color 0.25s ease-in-out;
+}
+/* styles for next button hover event */
+#me section:first-child a:hover {
+  background-color: #d1cdf3;
+}
+
+/* style the last child of me section (picture section) */
+#me section:last-child {
+  /* setting the width to be half of the screen and for large screens it takes just 600 pixels */
+  width: 50%;
+  /* max-width: 600px; */
+  background: #1e191f;
+
+  /* making the section flex to easy postiotn the picture */
+  display: flex;
+  flex-direction: column;
+}
+
+/* styling the haeder text */
+#me section:last-child h1 {
+  font-size: 42px;
+  width: 300px;
+  margin-top: auto;
+  margin-left: 2em;
+  font-weight: bolder;
+  /* adding stroke to the text */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(252, 252, 252, 0.12);
+}
+
+/* styling the inner diffrent haeder text */
+#me section:last-child h1 span {
+  color: #7064de;
+}
+
+/* styling the image inside the picture container */
+#me section:last-child img {
+  /* setting the width to fit the section */
+  width: 50%;
+  /* make the image cover the size of its container */
+  object-fit: cover;
+  /* setting margin top auto to take all space from the top and postion it on the bottom*/
+  margin-top: auto;
+  /* align the image to be center in horizontal */
+  align-self: center;
+}
+
+/*making the hboies section takes all width and height adding sapcing also  */
+#hobies {
+  width: 100%;
+  min-height: 100vh;
+  padding: 4em 0;
+}
+
+/* styling the hobies text */
+#hobies > h3 {
+  color: #7064de;
+  font-size: 28px;
+  text-align: center;
+
+  margin: 24px 8px;
+}
+
+/* hobies items sectiom container  */
+#hobies section {
+  /* making displat to flex to place items horizontaly */
+  display: flex;
+  /* align all items center */
+  align-items: center;
+  /* 12px spacing between each element */
+  gap: 12px;
+  /* flex wrap to place item on new line if the space ends */
+  flex-wrap: wrap;
+  /*  adding some spacing from top */
+  margin: 0.75em auto;
+}
+
+/* hoby item styling */
+.hoby-item {
+  width: 300px;
+  height: 450px;
+  background: #d1cdf3;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 0 12px 3px rgba(252, 252, 252, 0.12);
+  border-top: solid 0.25px rgba(0, 0, 0, 0.05);
+}
+/* styling the image of hoby section */
+.hoby-item > img {
+  /* making width to be 100% of the hoby container */
+  width: 100%;
+  /* make fixed height of 200px  */
+  height: 200px;
+  /* make img fit in the size of the image container */
+  object-fit: cover;
+  /* make border top 8px to fit the whole container */
+  border-radius: 8px 8px 0 0;
+}
+
+/* styling the hoby title */
+.hoby-item > h4 {
+  /*move the text to the left*/
+  align-self: flex-start;
+  /* 10px spacing from left */
+  margin-left: 10px;
+}
+
+.hoby-item > p {
+  /* 10px spacing from left and right */
+  padding: 0 12px;
+  /* take 4px extra white space */
+  margin-left: 4px;
+  /* make font size smaller */
+  font-size: 14px;
+  /* increase the spcae between lines */
+  line-height: 22px;
+  /* make the text a little bold */
+  font-weight: 600;
+  /* setting the grey color to the text */
+  color: #7c7c7c;
+}
+
+.hoby-item > a {
+  /* make the text a little bold */
+  font-weight: 600;
+  /* setting the color to light purple */
+  color: #7b74b9;
+  /* remove the unserline */
+  text-decoration: none;
+  /* make the link appears on the right side of the container */
+  align-self: flex-end;
+  /* making some spacing from the right */
+  margin-right: 12px;
+  /* to make link all to the bottom*/
+  margin-top: auto;
+  /* add some space from the bottom */
+  margin-bottom: 12px;
+}
+/* styles for from section */
+#question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* styles for the text of Guess Favourite Hoby */
+#question h3 {
+  font-size: 28px;
+  color: #7064de;
+  margin: 12px;
+}
+/* styles for the form container */
+#question form {
+  background: #fff;
+  padding: 12px 8px;
+  border-radius: 4px;
+  /* adding some tin border to looks like shadow */
+  border: solid 1px rgba(0, 0, 0, 0.22);
+  /* spacing 20 px from top and bottom */
+  margin: 20px 0;
+  /* making display flex to easy manage the postions */
+  display: flex;
+  /* to appear element in line rather than rows */
+  flex-direction: column;
+  /* adding sapcing between elements and the container border's */
+  padding: 22px 10px;
+  /* adding space between elements them selfs */
+  gap: 12px;
+}
+
+/* styles for the label of the form  */
+#question form > div label {
+  font-size: 14px;
+  color: #7c7c7c;
+  font-weight: 600;
+}
+
+/* styling the select options of the form */
+#question form > div select {
+  padding: 12px 8px;
+  border-radius: 4px;
+  color: #7064de;
+  font-weight: bold;
+  font-size: 16px;
+  margin-inline: 12px;
+  border-width: 2.25px;
+  border-color: #7b74b9;
+}
+
+/* styles for the buttom of submtion */
+#question form > button[type="submit"] {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #7b74b9;
+  color: #7064de;
+  margin-inline: 12px;
+  outline: none;
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+#question form > button[type="submit"]:hover {
+  background: #afa9df;
+}
